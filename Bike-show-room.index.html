@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Royal Wheels Bike Showroom – Chennai's premier destination for premium motorcycles. Explore top brands like Royal Enfield, KTM, Yamaha, Honda and more." />
+  <meta name="keywords" content="bike showroom, Royal Enfield, KTM, Yamaha, Honda, TVS, Bajaj, Chennai, motorcycle, test ride" />
+  <title>Royal Wheels – Ride Your Dream Bike Today</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ══════════════ NAVBAR ══════════════ -->
+<nav class="navbar navbar-expand-lg sticky-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <span class="brand-icon"><i class="bi bi-shield-fill-check"></i></span>
+      <span class="brand-text">Royal <em>Wheels</em></span>
+    </a>
+
+    <!-- Search + Theme Toggle + Hamburger -->
+    <div class="d-flex align-items-center gap-2 ms-auto me-2 d-lg-none">
+      <button class="btn btn-icon" id="searchToggleMobile" aria-label="Search"><i class="bi bi-search"></i></button>
+      <button class="btn btn-icon theme-toggle" id="themeToggleMobile" aria-label="Toggle theme"><i class="bi bi-moon-stars-fill"></i></button>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="toggler-icon"><span></span><span></span><span></span></span>
+      </button>
+    </div>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mx-auto gap-1">
+        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#bikes">Bikes</a></li>
+        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#finance">Finance</a></li>
+        <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="#testimonials">Reviews</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+      <div class="d-none d-lg-flex align-items-center gap-2">
+        <button class="btn btn-icon" id="searchToggle" aria-label="Search"><i class="bi bi-search"></i></button>
+        <button class="btn btn-icon theme-toggle" id="themeToggle" aria-label="Toggle theme"><i class="bi bi-moon-stars-fill"></i></button>
+        <a href="#booking" class="btn btn-primary-custom">Book Test Ride</a>
+      </div>
+    </div>
+  </div>
+  <!-- Search Bar -->
+  <div class="search-overlay" id="searchOverlay">
+    <div class="container">
+      <div class="search-inner">
+        <i class="bi bi-search"></i>
+        <input type="text" id="searchInput" placeholder="Search bikes, brands, services…" autocomplete="off" />
+        <button id="searchClose"><i class="bi bi-x-lg"></i></button>
+      </div>
+      <div id="searchResults" class="search-results"></div>
+    </div>
+  </div>
+</nav>
+
+<!-- ══════════════ HERO ══════════════ -->
+<section id="home" class="hero-section">
+  <div class="hero-bg">
+    <div class="hero-overlay"></div>
+    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1800&auto=format&fit=crop" alt="Bike Showroom Banner" class="hero-img" />
+  </div>
+  <div class="hero-particles" id="heroParticles"></div>
+  <div class="container hero-content">
+    <div class="row align-items-center min-vh-100">
+      <div class="col-lg-7 hero-text" data-aos>
+        <span class="hero-badge">Chennai's #1 Bike Showroom</span>
+        <h1 class="hero-title">Ride Your<br/><em>Dream Bike</em><br/>Today</h1>
+        <p class="hero-sub">Explore 15+ premium brands, 200+ models, and drive away the motorcycle you've always wanted — with unbeatable EMI options.</p>
+        <div class="hero-cta">
+          <a href="#bikes" class="btn btn-primary-custom btn-lg">
+            <i class="bi bi-grid-3x3-gap-fill me-2"></i>Explore Bikes
+          </a>
+          <a href="#booking" class="btn btn-outline-custom btn-lg">
+            <i class="bi bi-calendar-check me-2"></i>Book Test Ride
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="h-stat"><span class="h-num">10K+</span><span class="h-lbl">Happy Customers</span></div>
+          <div class="h-divider"></div>
+          <div class="h-stat"><span class="h-num">5K+</span><span class="h-lbl">Bikes Sold</span></div>
+          <div class="h-divider"></div>
+          <div class="h-stat"><span class="h-num">15+</span><span class="h-lbl">Brands</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a href="#about" class="scroll-down-btn"><i class="bi bi-chevron-double-down"></i></a>
+</section>
+
+<!-- ══════════════ ABOUT ══════════════ -->
+<section id="about" class="section-pad">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-5" data-aos>
+        <div class="about-img-wrap">
+          <img src="https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?w=700&auto=format&fit=crop" alt="Royal Wheels Showroom" class="about-img" />
+          <div class="about-badge-card">
+            <span class="ab-num">12+</span>
+            <span class="ab-txt">Years of Excellence</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-7" data-aos>
+        <span class="section-label">About Us</span>
+        <h2 class="section-title">Chennai's Most Trusted<br/>Bike Destination</h2>
+        <p class="section-desc">Founded in 2012, Royal Wheels has grown from a small outlet to Chennai's most celebrated multi-brand motorcycle showroom. We believe every rider deserves to find the perfect machine that matches their soul.</p>
+        <div class="row g-3 mb-4">
+          <div class="col-sm-6">
+            <div class="about-card">
+              <i class="bi bi-bullseye"></i>
+              <div>
+                <h5>Our Mission</h5>
+                <p>Deliver exceptional buying experiences with transparent pricing and genuine after-sales care.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="about-card">
+              <i class="bi bi-eye-fill"></i>
+              <div>
+                <h5>Our Vision</h5>
+                <p>To be South India's largest multi-brand bike ecosystem by 2030.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about-features">
+          <span><i class="bi bi-check-circle-fill"></i> 200+ Bikes in Showroom</span>
+          <span><i class="bi bi-check-circle-fill"></i> Certified Service Center</span>
+          <span><i class="bi bi-check-circle-fill"></i> Easy Finance Options</span>
+          <span><i class="bi bi-check-circle-fill"></i> On-Road Assistance 24/7</span>
+          <span><i class="bi bi-check-circle-fill"></i> Genuine Spare Parts</span>
+          <span><i class="bi bi-check-circle-fill"></i> Insurance & RTO Support</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ STATS ══════════════ -->
+<section class="stats-section">
+  <div class="container">
+    <div class="row g-4 text-center">
+      <div class="col-6 col-md-3" data-aos>
+        <div class="stat-card">
+          <i class="bi bi-emoji-smile-fill"></i>
+          <span class="stat-num" data-target="10000">0</span><span class="stat-plus">+</span>
+          <p>Happy Customers</p>
+        </div>
+      </div>
+      <div class="col-6 col-md-3" data-aos>
+        <div class="stat-card">
+          <i class="bi bi-bicycle"></i>
+          <span class="stat-num" data-target="5000">0</span><span class="stat-plus">+</span>
+          <p>Bikes Sold</p>
+        </div>
+      </div>
+      <div class="col-6 col-md-3" data-aos>
+        <div class="stat-card">
+          <i class="bi bi-award-fill"></i>
+          <span class="stat-num" data-target="15">0</span><span class="stat-plus">+</span>
+          <p>Brands Available</p>
+        </div>
+      </div>
+      <div class="col-6 col-md-3" data-aos>
+        <div class="stat-card">
+          <i class="bi bi-tools"></i>
+          <span class="stat-num" data-target="20">0</span><span class="stat-plus">+</span>
+          <p>Service Experts</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ FEATURED BIKES ══════════════ -->
+<section id="bikes" class="section-pad">
+  <div class="container">
+    <div class="section-header text-center" data-aos>
+      <span class="section-label">Our Collection</span>
+      <h2 class="section-title">Featured Bikes</h2>
+      <p class="section-desc">Hand-picked motorcycles across every segment — from daily commuters to weekend monsters.</p>
+    </div>
+
+    <!-- Filter -->
+    <div class="bike-filters" data-aos>
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="royal-enfield">Royal Enfield</button>
+      <button class="filter-btn" data-filter="ktm">KTM</button>
+      <button class="filter-btn" data-filter="yamaha">Yamaha</button>
+      <button class="filter-btn" data-filter="honda">Honda</button>
+      <button class="filter-btn" data-filter="tvs">TVS</button>
+      <button class="filter-btn" data-filter="bajaj">Bajaj</button>
+    </div>
+
+    <div class="row g-4" id="bikeGrid">
+      <!-- Cards injected by JS -->
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ BIKE MODAL ══════════════ -->
+<div class="modal fade" id="bikeModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content bike-modal-content">
+      <button type="button" class="btn-close-modal" data-bs-dismiss="modal"><i class="bi bi-x-lg"></i></button>
+      <div id="bikeModalBody"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ SERVICES ══════════════ -->
+<section id="services" class="section-pad services-section">
+  <div class="container">
+    <div class="section-header text-center" data-aos>
+      <span class="section-label">What We Offer</span>
+      <h2 class="section-title">Our Services</h2>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-4 col-lg-2 col-6" data-aos>
+        <div class="service-card">
+          <div class="svc-icon"><i class="bi bi-bicycle"></i></div>
+          <h5>Bike Sales</h5>
+          <p>New & pre-owned bikes across 15+ brands at best prices.</p>
+        </div>
+      </div>
+      <div class="col-md-4 col-lg-2 col-6" data-aos>
+        <div class="service-card">
+          <div class="svc-icon"><i class="bi bi-calendar2-check"></i></div>
+          <h5>Test Ride</h5>
+          <p>Book a no-obligation test ride at your doorstep.</p>
+        </div>
+      </div>
+      <div class="col-md-4 col-lg-2 col-6" data-aos>
+        <div class="service-card">
+          <div class="svc-icon"><i class="bi bi-shield-check"></i></div>
+          <h5>Insurance</h5>
+          <p>Instant insurance renewal & new policies across providers.</p>
+        </div>
+      </div>
+      <div class="col-md-4 col-lg-2 col-6" data-aos>
+        <div class="service-card">
+          <div class="svc-icon"><i class="bi bi-wrench-adjustable"></i></div>
+          <h5>Bike Service</h5>
+          <p>Manufacturer-trained technicians for all service needs.</p>
+        </div>
+      </div>
+      <div class="col-md-4 col-lg-2 col-6" data-aos>
+        <div class="service-card">
+          <div class="svc-icon"><i class="bi bi-box-seam"></i></div>
+          <h5>Spare Parts</h5>
+          <p>100% genuine spare parts, same-day availability.</p>
+        </div>
+      </div>
+      <div class="col-md-4 col-lg-2 col-6" data-aos>
+        <div class="service-card">
+          <div class="svc-icon"><i class="bi bi-bag-heart"></i></div>
+          <h5>Accessories</h5>
+          <p>Helmets, riding gear, custom accessories & more.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ FINANCE ══════════════ -->
+<section id="finance" class="section-pad">
+  <div class="container">
+    <div class="section-header text-center" data-aos>
+      <span class="section-label">Easy EMI</span>
+      <h2 class="section-title">Finance & EMI Calculator</h2>
+    </div>
+    <div class="row g-5 align-items-start">
+      <!-- EMI Calc -->
+      <div class="col-lg-6" data-aos>
+        <div class="emi-calc-card">
+          <h4 class="mb-4"><i class="bi bi-calculator-fill me-2"></i>EMI Calculator</h4>
+          <div class="mb-3">
+            <label class="form-label">Bike Price (₹)</label>
+            <input type="range" class="form-range" id="loanAmt" min="30000" max="2500000" step="5000" value="150000" />
+            <div class="range-val">₹<span id="loanAmtVal">1,50,000</span></div>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Down Payment (₹)</label>
+            <input type="range" class="form-range" id="downPay" min="0" max="500000" step="5000" value="20000" />
+            <div class="range-val">₹<span id="downPayVal">20,000</span></div>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Interest Rate: <span id="rateVal">9.5</span>%</label>
+            <input type="range" class="form-range" id="interestRate" min="7" max="18" step="0.5" value="9.5" />
+          </div>
+          <div class="mb-4">
+            <label class="form-label">Loan Tenure</label>
+            <div class="tenure-btns">
+              <button class="tenure-btn active" data-months="12">1 yr</button>
+              <button class="tenure-btn" data-months="24">2 yr</button>
+              <button class="tenure-btn" data-months="36">3 yr</button>
+              <button class="tenure-btn" data-months="48">4 yr</button>
+              <button class="tenure-btn" data-months="60">5 yr</button>
+            </div>
+          </div>
+          <div class="emi-result">
+            <div class="emi-item">
+              <span>Monthly EMI</span>
+              <strong id="emiResult">₹12,345</strong>
+            </div>
+            <div class="emi-item">
+              <span>Total Interest</span>
+              <strong id="totalInterest">₹12,345</strong>
+            </div>
+            <div class="emi-item">
+              <span>Total Amount</span>
+              <strong id="totalAmt">₹1,62,345</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Finance Info -->
+      <div class="col-lg-6" data-aos>
+        <div class="finance-info">
+          <h4 class="mb-3">Why Finance with Royal Wheels?</h4>
+          <ul class="finance-list">
+            <li><i class="bi bi-lightning-fill"></i> Instant approval in 30 minutes</li>
+            <li><i class="bi bi-percent"></i> Interest rates starting at 7.5% p.a.</li>
+            <li><i class="bi bi-cash-stack"></i> Zero processing fee on select models</li>
+            <li><i class="bi bi-calendar3"></i> Flexible tenure: 12–60 months</li>
+            <li><i class="bi bi-file-earmark-check"></i> Minimal documentation required</li>
+          </ul>
+          <h5 class="mt-4 mb-3">Our Banking Partners</h5>
+          <div class="bank-partners">
+            <span class="bank-tag">HDFC Bank</span>
+            <span class="bank-tag">ICICI Bank</span>
+            <span class="bank-tag">SBI</span>
+            <span class="bank-tag">Axis Bank</span>
+            <span class="bank-tag">Bajaj Finserv</span>
+            <span class="bank-tag">Hero FinCorp</span>
+          </div>
+          <h5 class="mt-4 mb-3">Loan Process</h5>
+          <div class="loan-steps">
+            <div class="loan-step"><span class="ls-num">1</span><span>Choose your bike & fill application</span></div>
+            <div class="loan-step"><span class="ls-num">2</span><span>Document verification (30 mins)</span></div>
+            <div class="loan-step"><span class="ls-num">3</span><span>Loan sanctioned & disbursed</span></div>
+            <div class="loan-step"><span class="ls-num">4</span><span>Drive away your dream bike!</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ GALLERY ══════════════ -->
+<section id="gallery" class="section-pad gallery-section">
+  <div class="container">
+    <div class="section-header text-center" data-aos>
+      <span class="section-label">Visual Tour</span>
+      <h2 class="section-title">Gallery</h2>
+    </div>
+    <div class="gallery-tabs" data-aos>
+      <button class="gallery-tab active" data-tab="bikes">Bikes</button>
+      <button class="gallery-tab" data-tab="showroom">Showroom</button>
+      <button class="gallery-tab" data-tab="delivery">Deliveries</button>
+    </div>
+    <div class="gallery-grid" id="galleryGrid">
+      <!-- injected by JS -->
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <button class="lb-close" id="lbClose"><i class="bi bi-x-lg"></i></button>
+  <button class="lb-prev" id="lbPrev"><i class="bi bi-chevron-left"></i></button>
+  <button class="lb-next" id="lbNext"><i class="bi bi-chevron-right"></i></button>
+  <div class="lb-img-wrap"><img id="lbImg" src="" alt="Gallery" /></div>
+</div>
+
+<!-- ══════════════ TESTIMONIALS ══════════════ -->
+<section id="testimonials" class="section-pad">
+  <div class="container">
+    <div class="section-header text-center" data-aos>
+      <span class="section-label">Happy Riders</span>
+      <h2 class="section-title">What Our Customers Say</h2>
+    </div>
+    <div class="testimonials-track" id="testimonialsTrack">
+      <!-- injected by JS -->
+    </div>
+    <div class="testi-dots" id="testiDots"></div>
+  </div>
+</section>
+
+<!-- ══════════════ TEST RIDE BOOKING ══════════════ -->
+<section id="booking" class="section-pad booking-section">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8" data-aos>
+        <div class="booking-card">
+          <div class="booking-header">
+            <i class="bi bi-calendar-heart-fill"></i>
+            <h2>Book a Free Test Ride</h2>
+            <p>Experience before you buy — zero obligation, just pure riding joy.</p>
+          </div>
+          <form id="bookingForm" class="booking-form" novalidate>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label">Full Name *</label>
+                <input type="text" class="form-control" id="fname" placeholder="Your name" required />
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Mobile Number *</label>
+                <input type="tel" class="form-control" id="fphone" placeholder="+91 XXXXX XXXXX" required pattern="[6-9]\d{9}" />
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Email Address *</label>
+                <input type="email" class="form-control" id="femail" placeholder="you@email.com" required />
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Bike Model *</label>
+                <select class="form-control" id="fbike" required>
+                  <option value="">Select a bike</option>
+                  <option>Royal Enfield Classic 350</option>
+                  <option>Royal Enfield Meteor 350</option>
+                  <option>KTM Duke 390</option>
+                  <option>Yamaha MT-15 V2</option>
+                  <option>Honda CB Hornet 2.0</option>
+                  <option>TVS Apache RTR 310</option>
+                  <option>Bajaj Pulsar NS200</option>
+                  <option>KTM Adventure 390</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Preferred Date *</label>
+                <input type="date" class="form-control" id="fdate" required />
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Preferred Time *</label>
+                <select class="form-control" id="ftime" required>
+                  <option value="">Select time slot</option>
+                  <option>9:00 AM – 10:00 AM</option>
+                  <option>10:00 AM – 11:00 AM</option>
+                  <option>11:00 AM – 12:00 PM</option>
+                  <option>12:00 PM – 1:00 PM</option>
+                  <option>2:00 PM – 3:00 PM</option>
+                  <option>3:00 PM – 4:00 PM</option>
+                  <option>4:00 PM – 5:00 PM</option>
+                  <option>5:00 PM – 6:00 PM</option>
+                </select>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn btn-primary-custom btn-lg w-100">
+                  <i class="bi bi-send-fill me-2"></i>Confirm My Test Ride
+                </button>
+              </div>
+            </div>
+          </form>
+          <div id="bookingSuccess" class="booking-success d-none">
+            <i class="bi bi-check-circle-fill"></i>
+            <h4>Booking Confirmed!</h4>
+            <p>We'll call you within 30 minutes to finalize the details. See you at Royal Wheels!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ CONTACT ══════════════ -->
+<section id="contact" class="section-pad contact-section">
+  <div class="container">
+    <div class="section-header text-center" data-aos>
+      <span class="section-label">Get In Touch</span>
+      <h2 class="section-title">Visit Us</h2>
+    </div>
+    <div class="row g-4">
+      <div class="col-lg-4" data-aos>
+        <div class="contact-info">
+          <div class="contact-item">
+            <i class="bi bi-geo-alt-fill"></i>
+            <div>
+              <h5>Showroom Address</h5>
+              <p>No. 42, Anna Salai, Teynampet,<br/>Chennai – 600 018, Tamil Nadu</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="bi bi-telephone-fill"></i>
+            <div>
+              <h5>Phone</h5>
+              <a href="tel:+914422345678">+91 44 2234 5678</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="bi bi-whatsapp"></i>
+            <div>
+              <h5>WhatsApp</h5>
+              <a href="https://wa.me/919876543210">+91 98765 43210</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="bi bi-envelope-fill"></i>
+            <div>
+              <h5>Email</h5>
+              <a href="mailto:info@royalwheels.in">info@royalwheels.in</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="bi bi-clock-fill"></i>
+            <div>
+              <h5>Business Hours</h5>
+              <p>Mon – Sat: 9:00 AM – 7:00 PM<br/>Sunday: 10:00 AM – 5:00 PM</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-8" data-aos>
+        <div class="map-wrap">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.0345648506!2d80.2598!3d13.0451!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTPCsDAyJzQyLjQiTiA4MMKwMTUnMzUuMyJF!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin"
+            width="100%" height="400" style="border:0;" allowfullscreen loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade" title="Royal Wheels Location">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ FOOTER ══════════════ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <a class="footer-brand" href="#">
+          <i class="bi bi-shield-fill-check"></i> Royal <em>Wheels</em>
+        </a>
+        <p class="footer-desc">Chennai's most trusted multi-brand motorcycle showroom since 2012. Your ride, your way.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-2">
+        <h6 class="footer-heading">Quick Links</h6>
+        <ul class="footer-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#bikes">Bikes</a></li>
+          <li><a href="#finance">Finance</a></li>
+          <li><a href="#booking">Test Ride</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-6 col-lg-2">
+        <h6 class="footer-heading">Services</h6>
+        <ul class="footer-links">
+          <li><a href="#services">Bike Sales</a></li>
+          <li><a href="#services">Test Ride Booking</a></li>
+          <li><a href="#services">Insurance Renewal</a></li>
+          <li><a href="#services">Bike Servicing</a></li>
+          <li><a href="#services">Spare Parts</a></li>
+          <li><a href="#services">Accessories</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4">
+        <h6 class="footer-heading">Brands We Offer</h6>
+        <div class="brand-tags">
+          <span>Royal Enfield</span><span>KTM</span><span>Yamaha</span>
+          <span>Honda</span><span>TVS</span><span>Bajaj</span>
+          <span>Suzuki</span><span>Kawasaki</span><span>Hero</span>
+          <span>BMW Motorrad</span><span>Triumph</span><span>Harley-Davidson</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 Royal Wheels Bike Showroom. All rights reserved. Designed with <i class="bi bi-heart-fill text-danger"></i> in Chennai.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Back To Top -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="bi bi-chevron-up"></i></button>
+
+<!-- Toast -->
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+  <div id="liveToast" class="toast align-items-center" role="alert">
+    <div class="d-flex">
+      <div class="toast-body" id="toastMsg">Action completed!</div>
+      <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast"></button>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Custom JS -->
+<script src="app.js"></script>
+</body>
+</html>
